@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - property@localhost" uuid="5ff76619-e539-4a75-bf2e-1cb205a95718">
+    <database-info product="MySQL" version="5.7.9-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="property"/>
+      <table id="2" parent="1" name="landlord"/>
+      <table id="3" parent="1" name="tenant"/>
+      <column id="4" parent="2" name="userID">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="5" parent="2" name="userName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="6" parent="2" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="7" parent="2" name="gender">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;M&apos;, &apos;F&apos;)</data-type>
+      </column>
+      <column id="8" parent="2" name="smoker">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="9" parent="2" name="pet">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="10" parent="2" name="workStatus">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;employed&apos;, &apos;unemployed&apos;)</data-type>
+      </column>
+      <column id="11" parent="2" name="maritalStatus">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;single&apos;, &apos;couple&apos;)</data-type>
+      </column>
+      <column id="12" parent="2" name="status">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;tenant&apos;, &apos;landlord&apos;)</data-type>
+      </column>
+      <column id="13" parent="2" name="student">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="14" parent="2" name="timeCreated">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="15" parent="2" name="PRIMARY">
+        <columns>userID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="16" parent="3" name="userID">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+      </column>
+      <column id="17" parent="3" name="userName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="18" parent="3" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="19" parent="3" name="gender">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;M&apos;, &apos;F&apos;)</data-type>
+      </column>
+      <column id="20" parent="3" name="smoker">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="21" parent="3" name="pet">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="22" parent="3" name="workStatus">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;employed&apos;, &apos;unemployed&apos;)</data-type>
+      </column>
+      <column id="23" parent="3" name="maritalStatus">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;single&apos;, &apos;couple&apos;)</data-type>
+      </column>
+      <column id="24" parent="3" name="status">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;tenant&apos;, &apos;landlord&apos;)</data-type>
+      </column>
+      <column id="25" parent="3" name="student">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+      </column>
+      <column id="26" parent="3" name="timeCreated">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <key id="27" parent="3" name="PRIMARY">
+        <columns>userID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

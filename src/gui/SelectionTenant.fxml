@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSelectionTenant">
+    <top>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Tenant" />
+                <Region>
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin>
+                </Region>
+                <Label text="Label" />
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Label" />
+            </children>
+        </HBox>
+    </bottom>
+    <left>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <CheckBox fx:id="gender" mnemonicParsing="false" onAction="#isSelectedGender" selected="true" text="Gender" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="smoker" mnemonicParsing="false" onAction="#isSelectedSmoker" selected="true" text="Smoker" GridPane.rowIndex="2" />
+                        <CheckBox fx:id="pet" mnemonicParsing="false" onAction="#isSelectedPet" selected="true" text="Pet" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="workStatus" mnemonicParsing="false" onAction="#isSelectedWorkStatus" selected="true" text="Work Status" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="maritalStatus" mnemonicParsing="false" onAction="#isSelectedMaritalStatus" selected="true" text="Marital Status" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="student" mnemonicParsing="false" onAction="#isSelectedStudent" selected="true" text="Student" GridPane.rowIndex="6" />
+                        <Label text="Options" />
+                        <Slider fx:id="slider" blockIncrement="1.0" majorTickUnit="1.0" max="10" min="1" minorTickCount="0" showTickMarks="true" snapToTicks="true" value="5" GridPane.rowIndex="9" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+                            <children>
+                                <Label text="Display:" />
+                                <Label text="${slider.value}">
+                                    <HBox.margin>
+                                        <Insets left="4.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Button fx:id="newSelection" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#showListOfTenants" text="New Selection" GridPane.rowIndex="7" />
+                    </children>
+                </GridPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </left>
+    <center>
+        <ListView fx:id="listView" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

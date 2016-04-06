@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTL">
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Are you tenant or landlord?" />
+                <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0">
+                    <children>
+                        <RadioButton fx:id="tenant" mnemonicParsing="false" onAction="#handleButtonActionTenant" text="Tenant" toggleGroup="$statusGroup">
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="statusGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="landlord" mnemonicParsing="false" onAction="#handleButtonActionLandlord" text="Landlord" toggleGroup="$statusGroup" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <Label alignment="BOTTOM_LEFT" text="Created by DaBase" BorderPane.alignment="BOTTOM_LEFT" />
+    </bottom>
+</BorderPane>

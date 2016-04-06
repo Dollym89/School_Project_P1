@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRegTenant">
+    <center>
+        <GridPane maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER_LEFT">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <RadioButton fx:id="maleRadioButton" mnemonicParsing="false" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="femaleRadioButton" layoutX="210.0" layoutY="52.0" mnemonicParsing="false" text="Female" toggleGroup="$genderGroup" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <RadioButton fx:id="smokerRadioButton" layoutX="410.0" layoutY="52.0" mnemonicParsing="false" text="Smoker" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="smokerGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="petYesRadioButton" layoutX="210.0" layoutY="152.0" mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="petGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="nonsmokerRadioButton" layoutX="210.0" layoutY="252.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="92.0" text="Non-Smoker" toggleGroup="$smokerGroup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <RadioButton fx:id="petNoRadioButton" layoutX="210.0" layoutY="152.0" mnemonicParsing="false" text="No" toggleGroup="$petGroup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <RadioButton fx:id="empoyedRadioButton" layoutX="210.0" layoutY="252.0" mnemonicParsing="false" text="Employed" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="workinGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="unemployedRadioButton" layoutX="410.0" layoutY="252.0" mnemonicParsing="false" text="Unemployed" toggleGroup="$workinGroup" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Label id="userName" text="User name" />
+                <Label layoutX="10.0" layoutY="35.0" text="Password" GridPane.rowIndex="1" />
+                <Label layoutX="10.0" layoutY="35.0" text="What is your working status?" GridPane.rowIndex="5" />
+                <Label layoutX="10.0" layoutY="35.0" text="Do you have pets?" GridPane.rowIndex="4" />
+                <Label layoutX="10.0" layoutY="35.0" text="Smoker" GridPane.rowIndex="3" />
+                <Label layoutX="10.0" layoutY="35.0" text="Gender" GridPane.rowIndex="2" />
+                <Label layoutX="10.0" layoutY="316.0" text="What is your marital status?" GridPane.rowIndex="6" />
+                <Label layoutX="10.0" layoutY="292.0" text="Are you student?" GridPane.rowIndex="7" />
+                <RadioButton fx:id="singleRadioButton" mnemonicParsing="false" text="Single" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="maritalGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="coupleRadioButton" mnemonicParsing="false" text="Couple" toggleGroup="$maritalGroup" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <RadioButton fx:id="studentYesRadioButton" mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="studentGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="studentNoRadioButton" mnemonicParsing="false" text="No" toggleGroup="$studentGroup" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                <TextField fx:id="txtFieldUserName" onKeyReleased="#changeLabelColor" promptText="UserName" GridPane.columnIndex="1" />
+                <PasswordField fx:id="passFieldTenantPassWord" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="invisibleLabel" style="-fx-text-fill:#383838 " text="Label" textAlignment="CENTER" GridPane.columnIndex="2">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="8.0" />
+                    </padding>
+                </Label>
+            </children>
+            <effect>
+                <ColorAdjust />
+            </effect>
+            <opaqueInsets>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <top>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Please fill in all fields" />
+                <Region prefHeight="17.0" prefWidth="5.0" HBox.hgrow="NEVER" />
+                <Label text="${txtFieldUserName.text}" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Thank You for your time" />
+                <Region maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" HBox.hgrow="ALWAYS" />
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefWidth="70.0" text="BACK" />
+                <Button fx:id="saveButtonTenant" mnemonicParsing="false" onAction="#saveTenantToDatabase" prefWidth="70.0" text="SAVE">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="8.0" right="8.0" top="8.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>
